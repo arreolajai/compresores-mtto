@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+html, body, #root { height: 100%; }
+body { @apply bg-paper text-ink font-sans antialiased; padding: env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left); }
+:focus-visible { outline: 3px solid #E5A300; outline-offset: 2px; }
+@layer components {
+  .field { @apply w-full rounded-panel border border-steel/40 bg-white px-3 py-2.5 text-base text-ink placeholder:text-steel/60; }
+  .label { @apply mb-1 block text-sm font-medium text-ink; }
+}
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
